@@ -4,10 +4,10 @@
         require_once 'db/conn.php';
      $results=$crud->__getSpecialties();
 
-    if(!isset($_GET['id'])){
+    if(!isset($_GET['id'])){ 
         //error messages 
         include 'includes/errormessage.php';
-        header("Location: viewrecords,php ");
+        header("Location: viewrecords.php ");
     } else{
         $id=$_GET['id'];
         $attendee=$crud->getAttendeeDetails($id);

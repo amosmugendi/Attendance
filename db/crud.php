@@ -39,10 +39,11 @@
         }
         
      }
-     public function getAttendeeDetails($id){try{ $sql="select * from attendee  a inner join specialties s on s.specialty_id= a.specialty_id
+     public function getAttendeeDetails($id)
+     {try{ $sql="select * from attendee  a inner join specialties s on s.specialty_id= a.specialty_id
         where attendee_id=:id";
         $stmt= $this->db->prepare($sql);
-        $stmt->bindparam(':id',$id);
+        $stmt->bindparam(':id',$id);                            
         $stmt->execute();
         $result= $stmt->fetch();
         return $result;

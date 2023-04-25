@@ -17,7 +17,12 @@
         throw new PDOException($e->getMessage());
     }
     require_once 'crud.php';
+    require_once('users.php');
     $crud=new crud($pdo);
+    $person= new person($pdo);
+    
+
+    $person->insertUser("admin","password");
 
 
 

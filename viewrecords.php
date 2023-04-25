@@ -12,7 +12,7 @@
             <th>#</th>
             <th>First Name</th>
             <th>Last Name</th>
-            <th>Specialty</th>
+                        <th>Specialty</th>
             <th>Actions</th>
         </tr>
         <?php 
