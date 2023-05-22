@@ -48,7 +48,12 @@
     <div class="form-group">
         <label for="phone" class="form-label">Contact Number</label>
         <input type="text" class="form-control" id="phone" placeholder="enter contact number" name="phone">
-        <div id="phoneHelp" class="form-text text-muted">We'll never share your contact number with anyone else.</div>
+        <div id="phoneHelp" class="form-text text-muted">We'll never share your contact number with anyone else.</div><br/>
+    </div>
+    <div class="custom-file">
+       <input type="file" accept="image/*" class="custom-file-input" name="avatar" id="avatar"><br/>
+        <label for="avatar" class="custom-file-label">Choose File</label>
+        <small id="avatar" class="form-text text-danger"> FIle upload is Optional </small> 
     </div>
    
     <button type="submit " name="submit" class="btn btn-primary btn-block">Submit</button>
