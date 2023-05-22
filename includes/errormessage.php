@@ -1,3 +1,3 @@
 <div class="alert alert-danger" role="alert">
-  Operation Encountered and Error please check
+  Operation Encountered an Error please check
 </div>

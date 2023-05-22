@@ -1,10 +1,12 @@
 <?php 
 use LDAP\Result;
     require_once('db/conn.php');
+    require_once 'includes/session.php';
+    require_once 'includes/auth_check.php';
     //get values from post operation
     if(isset($_POST['submit'])){
         //extract values from the $_POST array
-        $id=$_POST['id'];
+        $id=$_POST['attendee_id'];
         $fname=$_POST['firstname'];
         $lname=$_POST['lastname'];
         $dob=$_POST['dob'];
@@ -20,7 +22,7 @@ use LDAP\Result;
     }
     }
     else{
-        echo 'error';
+        include 'includes/errormessage.php';
     }
 
 ?>

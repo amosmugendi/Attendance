@@ -13,10 +13,13 @@
                 return false;
             }
             else{ 
+                // obsecure the password
                 $new_password=md5($password.$username);
+                // define the sql querry to be executed 
                 $sql="INSERT INTO users (username,password)VALUES (:username,:password)";
+                // prepare the sql query for execution
                 $stmt=$this->db->prepare($sql);
-    
+                // bind all the placeholders to the actual values
                 $stmt->bindparam(':username',$username);
                 $stmt->bindparam(':password',$new_password);
                    //execute statement 

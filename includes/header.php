@@ -1,4 +1,6 @@
 <?php 
+// this includes the session file, this file contains code that starts/resumes a session
+// by having it in the header file, it will be included on every other page, allowing session capabilities to be used on every page across the website 
   include_once('includes/session.php')
 ?>
 <!doctype html>
@@ -32,8 +34,19 @@
     
         </div>
         <div class="navbar-nav ml-auto">
+          <?php
+          if(!isset($_SESSION['id'])){
+
+        
+          ?>
         <a class="nav-item nav-link" href="login.php"> Login <span class="sr-only">(current)</span></a>
+        <?php } else{ ?>
+          
+          <a class="nav-item nav-link" href="#"><span>Hello <?php echo $_SESSION['username'] ?> !</span> b<span class="sr-only">(current)</span></a>
+          <a class="nav-item nav-link" href="logout.php"> Logout <span class="sr-only">(current)</span></a>
+          <?php } ?>
         </div>
       </div>
     </div>
 </nav> 
+</br>

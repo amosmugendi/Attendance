@@ -1,6 +1,7 @@
 <?php 
         $title="Edit Record";
         require_once 'includes/header.php';
+        require_once 'includes/auth_check.php';
         require_once 'db/conn.php';
      $results=$crud->__getSpecialties();
 
@@ -19,7 +20,7 @@
     <h1 class="text-center">Edit Records</h1>
     
     <form method="post" action="editpost.php">
-    <input  type="hidden" name="id" value="<?php echo $attendee['attendee_id'] ?>"/> 
+    <input  type="hidden" name="attendee_id" value="<?php echo $attendee['attendee_id'] ?>"/> 
     <div class="form-group">
         <label for="Firstname" class="form-label">First Name</label>
         <input type="text" class="form-control" value="<?php echo $attendee ['firstname'] ?>" id="firstname" placeholder="enter First Name" name="firstname">
