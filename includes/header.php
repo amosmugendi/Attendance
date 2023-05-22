@@ -20,14 +20,13 @@
     <title> Attendance <?php $title?></title>
 </head>
   <body>
-  <div class="container">
   <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
     <div class="container-fluid">
       <a class="navbar-brand" href="index.php">IT CONFERENCE</a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
-      <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+      <div class="collapse navbar-collapse container" id="navbarNavAltMarkup">
         <div class="navbar-nav mr-auto">
           <a class="nav-item nav-link active" href="index.php">Home <span class="sr-only">(current)</span></a>
           <a class="nav-link" href="viewrecords.php">View Attendees</a>
@@ -42,11 +41,13 @@
         <a class="nav-item nav-link" href="login.php"> Login <span class="sr-only">(current)</span></a>
         <?php } else{ ?>
           
-          <a class="nav-item nav-link" href="#"><span>Hello <?php echo $_SESSION['username'] ?> !</span> b<span class="sr-only">(current)</span></a>
+          <a class="nav-item nav-link" href="#"><span>Hello <?php echo $_SESSION['username'] ?> !</span><span class="sr-only">(current)</span></a>
           <a class="nav-item nav-link" href="logout.php"> Logout <span class="sr-only">(current)</span></a>
           <?php } ?>
         </div>
       </div>
     </div>
 </nav> 
+  <div class="container">
+ 
 </br>
